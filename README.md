@@ -1,1 +1,1 @@
-# SAC_CustomWidget_HelloWorld_Start
+# Study case for SAC custom widget
