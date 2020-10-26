@@ -15,9 +15,21 @@
 			"url": "https://iprosis-web.github.io/sac_custom_widget/webcomponent.js", 
 			"integrity": "",
             "ignoreIntegrity" : true
-		}	
+		},
+		{
+			"kind": "styling",
+			"tag": "com-sap-sample-helloworld2-aps",
+			"url": "https://iprosis-web.github.io/sac_custom_widget/aps_webcomponent.js", 
+			"integrity": "",
+            "ignoreIntegrity" : true
+		}		
     ],
 	"properties": {
+		"widgetText": {
+			"type": "string",
+			"description": "The text to be deisplayed at the widget",
+			"default": "Hello world default"
+		}
 	},
 	"methods": {
 	},
