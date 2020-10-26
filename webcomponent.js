@@ -3,14 +3,14 @@
     tmpl.innerHTML = `
     `;
 
-    customElements.define('com-sap-sample-helloworld1', class WidgetTemplate extends HTMLElement {
+    customElements.define('com-sap-sample-helloworld2', class WidgetTemplate extends HTMLElement {
 
 
 		constructor() {
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this._tagContainer;
+            this._tagContainer = null;
             this._tagType = 'h3';
             this._tagText = 'Hello World h3';
 		}
@@ -65,4 +65,4 @@
         }
     });
         
-})();
+}) ();
