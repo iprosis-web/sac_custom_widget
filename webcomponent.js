@@ -58,7 +58,7 @@
                 }
 
             this._tagContainer = document.createElement(this._tagType);
-            let theText = document.createElement(this._tagText);
+            let theText = document.createTextNode(this._tagText);
             this._tagContainer.appendChild(theText);
             this._shadowRoot.appendChild(this._tagContainer);
             }
