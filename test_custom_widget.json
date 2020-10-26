@@ -1,12 +1,12 @@
 {
-	"name": "Hello World Step 1",
+	"name": "Hello World",
 	"description": "Custom widget study",
 	"eula": "",
 	"vendor": "iProsis",
 	"license": "",
 	"id": "com.sap.sample.helloworld1",
 	"newInstancePrefix": "HelloWorld1",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"icon": "",
 	"webcomponents": [
 		{

@@ -1,7 +1,6 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-     <h1>Hello World</h1>
     `;
 
     customElements.define('com-sap-sample-helloworld1', class WidgetTemplate extends HTMLElement {
@@ -9,10 +8,12 @@
 
 		constructor() {
 			super(); 
-			let shadowRoot = this.attachShadow({mode: "open"});
-			shadowRoot.appendChild(tmpl.content.cloneNode(true));
+			this._shadowRoot = this.attachShadow({mode: "open"});
+            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this._tagContainer;
+            this._tagType = 'h1';
+            this._tagText = 'Hello World';
 		}
-
 
         //Fired when the widget is added to the html DOM of the page
         connectedCallback(){
@@ -50,10 +51,18 @@
         }
         */
 
-        redraw(){
+        redraw() {
+            if (this._tagText) {
+                if (this._tagContainer) {
+                    this._tagContainer.parentNode.removeChild(this._tagContainer);
+                }
+
+            this._tagContainer = document.createElement(this._tagType);
+            let theText = document.createElement(this._tagText);
+            this._tagContainer.appendChild(theText);
+            this._shadowRoot.appendChild(this._tagContainer);
+            }
         }
-    
-    
     });
         
 })();
