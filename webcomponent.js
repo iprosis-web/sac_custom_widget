@@ -11,8 +11,8 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._tagContainer;
-            this._tagType = 'h1';
-            this._tagText = 'Hello World';
+            this._tagType = 'h3';
+            this._tagText = 'Hello World h3';
 		}
 
         //Fired when the widget is added to the html DOM of the page
