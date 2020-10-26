@@ -4,14 +4,14 @@
 	"eula": "",
 	"vendor": "iProsis",
 	"license": "",
-	"id": "com.sap.sample.helloworld1",
-	"newInstancePrefix": "HelloWorld1",
-	"version": "0.0.2",
+	"id": "com.sap.sample.helloworld2",
+	"newInstancePrefix": "HelloWorld2",
+	"version": "0.0.3",
 	"icon": "",
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "com-sap-sample-helloworld1",
+			"tag": "com-sap-sample-helloworld2",
 			"url": "https://iprosis-web.github.io/sac_custom_widget/webcomponent.js", 
 			"integrity": "",
             "ignoreIntegrity" : true
