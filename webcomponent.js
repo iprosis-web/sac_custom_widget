@@ -70,6 +70,14 @@
         set widgetText(value) {
             this._tagText = value;
         }
+
+        get headingType() {
+            return this._tagType;
+        }
+
+        set headingType(value) {
+            this._tagType = value;
+        }
         
     });
         
