@@ -39,7 +39,7 @@
         }
 
         get widgetText() {
-            return trhis.shadowRoot.getElementById('aps_text').value;
+            return this.shadowRoot.getElementById('aps_text').value;
         }
 
 	}
