@@ -12,18 +12,18 @@
 		{
 			"kind": "main",
 			"tag": "com-sap-sample-helloworld2",
-			"url": "https://iprosis-web.github.io/sac_custom_widget/webcomponent.js", 
+			"url": "https://iprosis-web.github.io/sac_custom_widget/webcomponent.js",
 			"integrity": "",
-            "ignoreIntegrity" : true
+			"ignoreIntegrity": true
 		},
 		{
 			"kind": "styling",
 			"tag": "com-sap-sample-helloworld2-aps",
-			"url": "https://iprosis-web.github.io/sac_custom_widget/aps_webcomponent.js", 
+			"url": "https://iprosis-web.github.io/sac_custom_widget/aps_webcomponent.js",
 			"integrity": "",
-            "ignoreIntegrity" : true
-		}		
-    ],
+			"ignoreIntegrity": true
+		}
+	],
 	"properties": {
 		"widgetText": {
 			"type": "string",
@@ -69,5 +69,8 @@
 	},
 
 	"events": {
+		"on±Click": {
+			"descrption": "Called when user licks the widget"
+		}
 	}
 }
