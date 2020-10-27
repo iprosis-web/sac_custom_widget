@@ -36,6 +36,7 @@
 			"default": "h1"
 		}
 	},
+	
 	"methods": {
 		"setH1": {
 			"description": "Update the h<1,2,3> tag of the widget to h1",
@@ -62,7 +63,8 @@
 					"type": "string",
 					"description": "Displayed text"
 				}
-			]
+			],
+			"body": "this.widgetText = newTextValue;"
 		}
 	},
 

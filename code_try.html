@@ -1,0 +1,95 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <style>
+
+            .container {
+                width: 200px
+            }
+
+            .inputSearch {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid rgb(204, 211, 219);
+                border-radius: 5px;
+                margin-bottom: 2px;
+            }
+
+            .inputSearch:focus {
+                border: 2px solid rgb(204, 211, 219);;
+                outline: none;
+            }
+
+             .itemsTable {
+                 width: 100%;
+                font: 16px Arial;   
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            .itemsTable td {
+                border: solid 1px #aaa;
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+
+            .itemsTable td:hover {
+                background-color: #e9e9e9; 
+            }
+
+            .itemsTable span {
+
+                margin: 0.5rem;
+            }   
+        </style>
+        
+    </body>
+
+    <div class="container">
+        <input type="text" class="inputSearch" placeholder="Start typing..."  oninput="onSearchInput(event)">
+    </div>
+
+    <script>
+        let fullArray = ['Ierger', 'Kwefwqf', 'Itwfwre','Hwefwqf','Lwfw', 'Lwgfver', 'Oqfqaf', 'Iqwerfqarf','Hqaevgq','Hqakhjgfjhg'];
+        
+        function reBuildItemsTable(items) {
+            let table = document.querySelector('.itemsTable');
+            if(table) {
+                table.parentNode.removeChild(table);
+            }
+            table = document.createElement('TABLE');
+            table.classList.add('itemsTable')
+            document.querySelector('.container').appendChild(table);
+            items.forEach(element => {
+                let row = document.createElement("TR");
+                let cell = document.createElement("TD");
+                let span =  document.createElement("SPAN");
+                span.innerText = element;
+                cell.appendChild(span);
+                row.appendChild(cell);
+                table.appendChild(row);
+                cell.onclick = onChooseItem;
+            });
+        }
+
+        function onSearchInput(event) {
+            let value = event.target.value;
+            let matchItems = [];
+            fullArray.forEach(element => {
+                if (value && element.startsWith(value)) {
+                    matchItems.push(element);
+                }
+            });
+            reBuildItemsTable(matchItems);
+        }    
+
+        function onChooseItem(event) {   
+            document.querySelector('.inputSearch').value = this.innerText;
+            reBuildItemsTable([]);
+        }
+
+    </script>
+</html>
