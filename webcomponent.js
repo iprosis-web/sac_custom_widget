@@ -75,6 +75,7 @@
 			}
 
 			get headingType() {
+				debugger;
 				return this._tagType;
 			}
 
